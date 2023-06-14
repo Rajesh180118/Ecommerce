@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <style> 
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        background-color: #ddd;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+    
+    .container{
+        background-color: #fff;
+        max-width: 40rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .left{
+        background-color: #2874f0;
+        padding: 8rem 4rem;
+        background-image: url(img/login_img_c4a81e.png);
+        background-repeat: no-repeat;
+        background-position: center 85%;
+    }
+    
+    .left h1{
+        color: #fff;
+        font-style: italic;
+        font-family: calibri;
+        padding-left: 1em;
+    }
+    
+    .left p{
+        color: #ddd;
+        font-family: Georgia;
+        padding-left: 1.3rem;
+    }
+    
+    .right{
+        padding: 2rem 1.5rem;
+    }
+    .right p0{
+        color: rgb(4, 4, 4);
+        font-family: Arial;
+        font-weight: bold;
+    }
+    
+    .right p1{
+        color: rgb(211, 198, 198);
+        font-size: small;
+    }
+    
+    .input-group{
+        padding: 1rem 0rem;
+        position: relative;
+    }
+    
+    .input1{
+        padding: 0.5rem 0;
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid #878787;
+        outline: none;
+        font-size: 1.1rem;
+    }
+    
+    .label{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #878787;
+        pointer-events: none;
+        transform-origin: left;
+        transition: transform 0.2s ease;
+    }
+    
+    .input1::placeholder {
+        visibility: hidden;
+    }
+    
+    .input1:focus ~ label,
+    .input1:not(:placeholder-shown) ~ label {
+        transform: translateY(-130%) scale(0.8);
+    }
+    
+    a{
+        text-decoration: none;
+        color: #2874f0;
+    }
+    
+    .input-group .link{
+        position: absolute;
+        right: 0%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .input-group .link:hover{
+        text-decoration: underline;
+    }
+    
+    .btn{
+        width: 40%;
+        margin-top: 1rem;
+        border: none;
+        background-color: #2874f0;
+        padding: 0.5rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        color: #fff;
+    }
+    
+    .btn1{
+        width: 40%;
+        margin-left: 2.5rem;
+        margin-top: 1rem;
+        border: none;
+        background-color: #fff;
+        padding: 0.5rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+        color: #2874f0;
+    }
+    
+    .link--a{
+        color: black;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .b{
+      text-decoration: none;
+      color: #2874f0;
+    }
+    
+    .link--a .b:hover{
+        text-decoration: underline;
+    }</style>
+</head>
+<body>
+    <div class="container">
+    <div class="left">
+        <h1>Flipkart</h1>
+        <p>Aab har wish hogi poori</p>
+    </div>
+    <div class="right">
+        <p0>Login</p0><br>
+        <p1>Get access to your's Orders, Wishlists & Recommendations</p1>
+        <form>
+        <div class="input-group">
+            <input class="input1" id="username" type="text" placeholder="___" />
+            <label class="label">Enter Email/Mobile Number</label>
+        </div>
+        <div class="input-group">
+            <input class="input1" id="Password" type="password" placeholder="___" />
+            <label class="label">Enter Password</label>
+            <a href="" class="link">Forget?</a>
+        </div>
+        <button class="btn" type="submit">Login</button>
+        <button class="btn1">Sign Up</button>
+    </form>
+        <p class="link--a">We no longer login via Social Account.To receive your old Accounts please <a href="" class="b">click here</a></p>
+    </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="center">
+        <section>
+            <div class="imgBx">
+                <img src="flip.png.png" alt="">
+                <h1>Flipkart</h1>
+                <br>
+                <div class="ab">Ab har p wish hogi poori</div>
+            </div>
+            <div class="contentBx">
+                <div class="formbx">
+                    <h2>Login</h2>
+                    <p>Get access to your Orders, Wishlist and Recommendations</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <form action="Flipkart.html" onsubmit="return validateForm()">
+                        <div class="inputbx">
+                            <p>Username</p>
+                            <input id="usernameInput" type="text" placeholder="Enter email or 10-digit number" required>
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <br>
+                        <div class="inputbx">
+                            <p>Password</p>
+                            <input type="password" placeholder="....................." required>
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <br>
+                        <table>
+                            <tr>
+                                <td class="Login">
+                                    <b><input type="submit" value="Login"></b>
+                                </td>
+                                <td class="Sign">
+                                    <b><input type="Submit" value="Sign up"></b>
+                                </td>
+                            </tr>
+                        </table>
+                        <br><br><br><br>
+                        <div class="inputbx">
+                            <p>We no longer support login via Social accounts. To recover your account, please <a href="">Click here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+    function validateForm() {
+    var usernameInput = document.getElementById("usernameInput").value;
+    // var passwordInput = document.getElementById("passwordInput").value;
+    var emailPattern = /^[a-z]+@gmail\.com$/;
+    var numberPattern = /^\d{10}$/;
+    //  var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10}$/;
+    
+    if (usernameInput !== usernameInput.toLowerCase()) {
+        alert("Please enter the username in lowercase.");
+        return false;
+    }
+    
+    if (!(emailPattern.test(usernameInput) || numberPattern.test(usernameInput))) {
+        alert("Please enter a valid email address ending with '@gmail.com' or a 10-digit number.");
+        return false;
+    }
+    
+    // // if (!passwordPattern.test(passwordInput)) {
+    //     alert("Please enter a password with exactly 10 characters, containing at least one uppercase letter, one lowercase letter, and one special character.");
+    //     return false;
+    //  }
+    
+    return true;
+}
+
+    </script>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="Login.css">
+     <title>Login Page</title>
+ </head>
+ 
+ <body>
+     <div class="center">
+         <section>
+             <div class="imgBx">
+                 <img src="flip.png.png" alt="">
+                 <h1>Flipkart</h1>
+                 <br>
+                 <div class="ab">Ab har p wish hogi poori</div>
+             </div>
+             <div class="contentBx">
+                 <div class="formbx">
+                     <h2>Login</h2>
+                     <p>Get access to your Orders, Wishlist and Recommendations</p>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <form action="Flipkart.html" onsubmit="return validateForm()">
+                         <div class="inputbx">
+                             <p>Username</p>
+                             <input id="usernameInput" type="text" placeholder="Enter email or 10-digit number" required>
+                             <i class="far fa-envelope"></i>
+                         </div>
+                         <br>
+                         <div class="inputbx">
+                             <p>Password</p>
+                             <input id="passwordInput" type="password" placeholder="....................." required>
+                             <i class="fas fa-lock"></i>
+                         </div>
+                         <a href="" class="link" style="text-decoration: none; color: black;">Forget?</a>
+                         <br>
+                         <table>
+                             <tr>
+                                 <td class="Login">
+                                     <b><input type="submit" value="Login"></b>
+                                 </td>
+                                 <td class="Sign">
+                                     <b> <button onclick="redirect()">Signup</button> </b>
+                                 </td>
+                             </tr>
+                         </table>
+                         <br><br><br><br>
+                         <div class="inputbx">
+                             <p>We no longer support login via Social accounts. To recover your account, please <a href="">Click here</a></p>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </section>
+     </div>
+ 
+     <script>
+         function validateForm() {
+             var usernameInput = document.getElementById("usernameInput").value.toLowerCase();
+             var passwordInput = document.getElementById("passwordInput").value;
+             var emailPattern = /^[a-z0-9]+@gmail\.com$/;
+             var numberPattern = /^\d{10}$/;
+             var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{10,}$/;
+ 
+             if (!(emailPattern.test(usernameInput) || numberPattern.test(usernameInput))) {
+                 alert("Please enter a valid email address ending with '@gmail.com' or a 10-digit number.");
+                 return false;
+             }
+ 
+             if (!passwordPattern.test(passwordInput)) {
+                 alert("Please enter a password with at least 10 characters, containing at least one uppercase letter, one lowercase letter, and one special character.");
+                 return false;
+             }
+ 
+             return true;
+         }
+
+         function redirect(){
+            window.location.href="Signup.html";
+         }
+     </script>
+ </body>
+ 
+ </html>
+ 
+ 
+
+

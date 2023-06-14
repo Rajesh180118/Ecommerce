@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smartwatch Product Listing</title>
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f6;
+}
+
+:root {
+    --primary-color: #2874f0;
+}
+
+.container {
+    padding: 0 8px;
+}
+
+/* header */
+header {
+    background-color: var(--primary-color);
+    height: 56px;
+}
+header .nav-container{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+header .nav-container .logo {
+    display: flex;
+    min-width: 137px;
+    justify-content: flex-end;
+}
+header .nav-container .logo img{
+    width: 75px;
+}
+
+header .search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+header .search .search-container{
+    width: 540px;
+    height: 36px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    display: flex;
+}
+header .search .search-container input {
+    width: calc(100% - 32px);
+    padding: 16px;
+    outline: none;
+    border: none;
+}
+header .search .search-container button {
+    width: 36px;
+    height: 100%;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+/* header .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+} */
+header .login button {
+    width: 122px;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+header .become-seller {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+header .more svg {
+    margin-left: 8px;
+    rotate: -90deg;
+}
+
+header .cart {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    
+    font-size: 16px;
+    font-weight: 500;
+}
+header .cart a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header .cart svg {
+    margin-right: 8px;
+}
+ .product-listing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  width: 300px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+.product-details {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-details h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-details .price {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+footer {
+    margin-top: 26px; 
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #878787 ;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="logo">
+            </div>
+            <div class="search">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search for products, brands and more">
+                    <button class="search-btn">
+                      </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="login">
+                <button>Login</button>
+            </div> -->
+            <div class="become-seller">
+                Become a Seller
+            </div>
+            <div class="more">
+                More
+                <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="zZ3yfL"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_2gTTdy"></path></svg>
+            </div>
+            <div class="cart">
+                <svg class="V3C5bO" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"></svg>
+               <a href="checkout.html">Cart</a> 
+            </div>
+        </div>
+    </header>
+
+    <br><br><br><br>
+    <section>
+
+   
+  <div class="product-listing">
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0997/6284/products/Side02_480x.png?v=1672316134" alt="Smartwatch 1">
+      <div class="product-details">
+        <h3>Smartwatch 1</h3>
+        <p class="price">$199</p>
+        <a href="Productdetails.html" class="btn">View Details</a>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0997/6284/products/Side03_480x.png?v=1672316134" alt="Smartwatch 2">
+      <div class="product-details">
+        <h3>Smartwatch 2</h3>
+        <p class="price">$249</p>
+        <a href="Productdetails.html" class="btn">View Details</a>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br> <br><br><br>
+<footer>
+    Made in 🇮🇳 by Flipkart
+</footer>
+
+</body>
+</html>
